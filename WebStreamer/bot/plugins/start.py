@@ -122,12 +122,11 @@ async def start(b, m):
         elif get_msg.audio:
             file_name = f"{get_msg.audio.file_name}"
 
-        stream_link = "https://{}/{}".format(Var.FQDN, get_msg.message_id) if Var.ON_HEROKU or Var.NO_PORT else \
-            "http://{}:{}/{}".format(Var.FQDN,
-                                     Var.PORT,
-                                     get_msg.message_id)
+        stream_link = Var.URL + 'stream/' + str(log_msg.message_id)
+        online_link = Var.URL + str(log_msg.message_id)
+        
 
-        msg_text ="""
+         msg_text ="""
 <i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
 
 <b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>
@@ -136,14 +135,14 @@ async def start(b, m):
 
 <b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>
 
-<b>🚸 Nᴏᴛᴇ : Lɪɴᴋ ᴇxᴘɪʀᴇᴅ ɪɴ 24 ʜᴏᴜʀꜱ</b>
+<b> WATCH  :</b> <i>{}</i>
 
-<i>🍃 Bᴏᴛ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :</i> <b>@AvishkarPatil</b>
+<b>🚸 Nᴏᴛᴇ : LINK WON'T DELETE TILL I DELETE</b>
 
-"""
+<i>© @Adarsh Goel </i>"""
 
         await m.reply_text(
-            text=msg_text.format(file_name, file_size, stream_link),
+            text=msg_text.format(file_name, file_size, online_link, stream_link),
             parse_mode="HTML",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ ɴᴏᴡ 📥", url=stream_link)]])
         )
