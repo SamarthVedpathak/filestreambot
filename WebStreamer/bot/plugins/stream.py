@@ -67,8 +67,8 @@ async def private_receive_handler(c: Client, m: Message):
         stream_link = Var.URL + 'stream/' + str(log_msg.message_id)
         shortlink = get_shortlink(stream_link)
         if shortlink:
-            online_link = shortlinka
-        online_link = Var.URL + str(log_msg.message_id)
+            online_link = shortlink
+        online_link = Var.URL + 'download/'+ str(log_msg.message_id)
         shortlinka = get_shortlink(online_link)
         if shortlinka:
             online_link = shortlinka
