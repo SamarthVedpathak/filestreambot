@@ -90,10 +90,10 @@ async def private_receive_handler(c: Client, m: Message):
         await m.reply_text(
             text=msg_text.format(file_name, file_size, stream_link),
             parse_mode="HTML", 
+            quote=True,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ ɴᴏᴡ 📥", url=stream_link), #Stream Link
                                                 InlineKeyboardButton('Download', url=online_link)]]) #Download Link
-            quote=True
         )
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
