@@ -55,7 +55,13 @@ async def private_receive_handler(c: Client, m: Message):
     try:
         log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
         stream_link = Var.URL + 'stream/' + str(log_msg.message_id)
+        shortlink = get_shortlink(stream_link)
+        if shortlink:
+            online_link = shortlinka
         online_link = Var.URL + str(log_msg.message_id)
+        shortlinkD = get_shortlink(online_link)
+        if shortlinkD:
+            online_link = shortlinkD
         
         file_size = None
         if m.video:
@@ -82,7 +88,7 @@ async def private_receive_handler(c: Client, m: Message):
 
 <b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>
 
-<b> WATCH  :</b> <i>{}</i>
+<b>    WATCH    :</b> <i>{}</i>
 
 <b>🚸 Nᴏᴛᴇ : LINK WON'T DELETE TILL I DELETE</b>
 
