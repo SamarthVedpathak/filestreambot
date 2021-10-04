@@ -100,7 +100,7 @@ async def private_receive_handler(c: Client, m: Message):
 
 <b>    WATCH    :</b> <i>{}</i>
 
-<b>🚸 Nᴏᴛᴇ : LINK WON'T DELETE TILL I DELETE</b>
+<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE</b>
 
 <i>© @AdarshGoelo5 </i>"""
 
