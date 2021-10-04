@@ -8,7 +8,16 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
+from pyshorteners import Shortener
 
+def get_shortlink(url):
+   shortlink = False 
+   try:
+      shortlink = Shortener().dagd.short(url)
+   except Exception as err:
+       print(err)
+       pass
+   return shortlink
 
 @StreamBot.on_message(filters.command('start') & filters.private & ~filters.edited)
 async def start(b, m):
@@ -123,8 +132,13 @@ async def start(b, m):
             file_name = f"{get_msg.audio.file_name}"
 
         stream_link = Var.URL + 'stream/' + str(log_msg.message_id)
-        online_link = Var.URL + str(log_msg.message_id)
-        
+        shortlink = get_shortlink(stream_link)
+        if shortlink:
+            stream_link = shortlink
+        online_link = Var.URL + 'download/' + str(log_msg.message_id)
+        shortlinka = get_shortlink(online_link)
+        if shortlinka:
+            online_link = shortlinka
 
         msg_text ="""
 <i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
