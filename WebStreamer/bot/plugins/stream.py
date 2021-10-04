@@ -10,6 +10,8 @@ from pyrogram import filters, Client
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
+from pyshorteners import Shortener
+
 
 
 def get_shortlink(url):
@@ -67,9 +69,9 @@ async def private_receive_handler(c: Client, m: Message):
         if shortlink:
             online_link = shortlinka
         online_link = Var.URL + str(log_msg.message_id)
-        shortlinkD = get_shortlink(online_link)
-        if shortlinkD:
-            online_link = shortlinkD
+        shortlinka = get_shortlink(online_link)
+        if shortlinka:
+            online_link = shortlinka
         
         file_size = None
         if m.video:
