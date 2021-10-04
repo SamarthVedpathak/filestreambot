@@ -139,7 +139,7 @@ async def start(b, m):
 
 <b>🚸 Nᴏᴛᴇ : LINK WON'T DELETE TILL I DELETE</b>
 
-<i>© @Adarsh Goel </i>"""
+<i>© @AdarshGoelo5 </i>"""
 
         await m.reply_text(
             text=msg_text.format(file_name, file_size, online_link, stream_link),
