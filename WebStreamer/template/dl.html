@@ -42,8 +42,10 @@
     </footer>
     
     
-    <script src="<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>"></script>
-	const = fluidPlayer(
+    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+<video id="video-id"><source src="video.mp4" type="video/mp4" />
+<script>
+    var myFP = fluidPlayer(
         'video-id',	{
 	"layoutControls": {
 		"controlBar": {
@@ -72,6 +74,7 @@
 		"adCTATextPosition": ""
 	}
 }
+</script>
         const fluidplayer = Plyr.setup('.player', { controls });
 
         const body = document.querySelector('body');
