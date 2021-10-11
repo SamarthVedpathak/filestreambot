@@ -25,7 +25,7 @@ async def start(b, m):
         await db.add_user(m.from_user.id)
         await b.send_message(
             Var.BIN_CHANNEL,
-            f"**Nᴇᴡ Usᴇʀ Jᴏɪɴᴇᴅ:** \n\n__--->__ [{m.from_user.first_name}](tg://user?id={m.from_user.id}) __Sᴛᴀʀᴛᴇᴅ Yᴏᴜʀ Bᴏᴛ !!__"
+            f"**Nᴇᴡ Usᴇʀ Jᴏɪɴᴇᴅ:** \n\n__--->__ [](tg://user?id={m.from_user.id}) __Sᴛᴀʀᴛᴇᴅ Yᴏᴜʀ Bᴏᴛ !!__"
         )
     usr_cmd = m.text.split("_")[-1]
     if usr_cmd == "/start":
@@ -57,21 +57,22 @@ async def start(b, m):
             except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<i>𝓢𝓸𝓶𝓮𝓽𝓱𝓲𝓷𝓰 𝔀𝓮𝓷𝓽 𝔀𝓻𝓸𝓷𝓰</i> <b><a href='http://t.me/Adarshgoelo5'>[CLICK HERE FOR SUPPORT ]</a></b>",
+                    text="<i>𝓢𝓸𝓶𝓮𝓽𝓱𝓲𝓷𝓰 𝔀𝓮𝓷𝓽 𝔀𝓻𝓸𝓷𝓰</i> <b><a href="http://t.me/Adarshgoelo5">[CLICK HERE FOR SUPPORT ]</a></b>",
                     parse_mode="HTML",
                     disable_web_page_preview=True)
                 return
         await m.reply_text(
             text="""
 <i>👋 ꜰɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ ᴡɪᴛʜ ʙᴏᴛʜ ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴᴅ ꜱᴛʀᴇᴀᴍ ʟɪɴᴋ ꜱᴜᴘᴘᴏʀᴛ</i>\n
-<i>Sir aap video bhejo koi dikkat nhi hoegi ekdum link ban jaegi<i>\n
+<i>Send a file/video and see magic!<i>\n
 <i>Cʟɪᴄᴋ ᴏɴ /help ᴛᴏ ɢᴇᴛ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</i>\n
-<i><b>🍃 Bᴏᴛ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :</b>@Adarshgoelo5  Friend of krrish Saini</i>\n\n
+<i><b>🍃 Bᴏᴛ Made Bʏ :</b>@Adarshgoelo5</i>\n\n
+<i><b>Bot owned by Var.ownername
 <i><u>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸</u></i>\n
 <b>Dont Spam.</b>""",
             parse_mode="HTML",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Owner', url='https://t.me/Adarshgoelo5'), 
+            reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Owner', url='t.me/Var.OWNER_USERNAME'), 
                                                                                        InlineKeyboardButton('Follow ', url='https://github.com/CodexMania') ] ]  ) )
                                                                                        
                                                                                        
