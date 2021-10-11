@@ -72,7 +72,7 @@ async def start(b, m):
 <b>Dont Spam.</b>""",
             parse_mode="HTML",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Used By', url="tg://settings"
+            reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Used By', url="tg://settings"),
                                                                                        InlineKeyboardButton('Follow ', url='https://github.com/CodexMania') ] ]  ) )
                                                                                        
                                                                                        
