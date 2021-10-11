@@ -1,4 +1,4 @@
-# © @AvishkarPatil [ Telegram ]
+
 
 from WebStreamer.bot import StreamBot
 from WebStreamer.vars import Var
@@ -67,12 +67,11 @@ async def start(b, m):
 <i>Send a file/video and see magic!<i>\n
 <i>Cʟɪᴄᴋ ᴏɴ /help ᴛᴏ ɢᴇᴛ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</i>\n
 <i><b>🍃 Bᴏᴛ Made Bʏ :</b>@Adarshgoelo5</i>\n\n
-<i><b>Bot owned by Var.ownername
 <i><u>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸</u></i>\n
 <b>Dont Spam.</b>""",
             parse_mode="HTML",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Owner', url='t.me/Var.OWNER_USERNAME'), 
+            reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Owner', url='t.me/{'Var.OWNER_USERNAME'}'), 
                                                                                        InlineKeyboardButton('Follow ', url='https://github.com/CodexMania') ] ]  ) )
                                                                                        
                                                                                        
