@@ -19,7 +19,6 @@ class Var(object):
     OWNER_ID = int(getenv('OWNER_ID', '1445283714'))
     NO_PORT = bool(getenv('NO_PORT', False))
     APP_NAME = None
-    OWNER_NAME = str(getenv('OWNER_NAME'))
     if 'DYNO' in environ:
         ON_HEROKU = True
         APP_NAME = str(getenv('APP_NAME'))
