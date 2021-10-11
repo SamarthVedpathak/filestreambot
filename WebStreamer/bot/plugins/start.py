@@ -67,11 +67,12 @@ async def start(b, m):
 <i>Send a file/video and see magic!<i>\n
 <i>Cʟɪᴄᴋ ᴏɴ /help ᴛᴏ ɢᴇᴛ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</i>\n
 <i><b>🍃 Bᴏᴛ Made Bʏ :</b>@Adarshgoelo5</i>\n\n
+<i><b>It is your responsibility to use wisely I dont take responsibilities of any vilations(of any kind)</i>\n
 <i><u>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸</u></i>\n
 <b>Dont Spam.</b>""",
             parse_mode="HTML",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Owner', url=f"t.me/{Var.OWNER_USERNAME}"), 
+            reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Used By', url="tg://settings"
                                                                                        InlineKeyboardButton('Follow ', url='https://github.com/CodexMania') ] ]  ) )
                                                                                        
                                                                                        
